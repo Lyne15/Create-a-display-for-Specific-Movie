@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Things to Do in Denver When You're Dead</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- <image id="background-content" src="https://image.tmdb.org/t/p/original//oPp6Gbrasox66WyMvPS0k8OakQf.jpg" width="100%"/> -->
+  <!-- <image id="bottom-background" src="https://image.tmdb.org/t/p/original//7fEOKdQIfbkOxy0enLtpyPGUsTm.jpg" height="120%" width="100%" /> -->
+  <!-- <image id="logo" src="https://image.tmdb.org/t/p/w500//m6AHu84oZQxvq7n1rsvMNJIAsMu.png"/> -->
+
+
+
+  <div class="content">
+
+    <h3 id="production_companies">production_companies</h3>
+
+    <h1 id="movie-title"> </h1>
+    <hr>
+    <hr id="first-line">
+    <h3 id="release_date">release_date</h3>
+    <p id="tagline">tagline</p>
+
+    <span>overview:</span>
+    <p id="overview">overview</p>
+
+    <div id="bottom-nav">
+      <div class="bottom-nav">
+        GENRES
+        <p id=genres1>Genres</p>
+        <p id=genres2>Genres</p>
+      </div>
+      <div class="bottom-nav">
+        PRODUCTION COUNTRIES
+        <p id="countries">country</p>
+      </div>
+      <div class="bottom-nav">
+        VOTE_AVERAGE
+        <p id="vote_average">vote_average</p>
+        VOTE_COUNT
+        <p id="vote_count">vote count</p>
+      </div>
+      <div class="bottom-nav">
+        SPOKEN_LANGUAGE
+        <p id="spoken_languages">spoken languages</p>
+
+      </div>
+    </div>
+
+
+
+
+
+    <script>
+      let movieID = 400;
+      const API_KEY = "1a76d232bd9ec86e6d73d8a2ef6962e6";
+      const API_URL = `https://api.themoviedb.org/3/movie/${movieID}?api_key=${API_KEY}`;
+
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(function (data) {
+          document.querySelector("#movie-title").innerHTML = data.title;
+          document.querySelector("#overview").innerHTML = data.overview;
+          document.querySelector("#genres1").innerHTML = data.genres[0].name;
+          document.querySelector("#genres2").innerHTML = data.genres[1].name;
+          document.querySelector("#countries").innerHTML = data.production_countries[0].name;
+          document.querySelector("#tagline").innerHTML = data.tagline;
+          document.querySelector("#vote_average").innerHTML = data.vote_average;
+          document.querySelector("#vote_count").innerHTML = data.vote_count;
+          document.querySelector("#production_companies").innerHTML = data.production_companies[0].name;
+          document.querySelector("#release_date").innerHTML = data.release_date;
+          document.querySelector("#spoken_languages").innerHTML = data.spoken_languages[0].name;
+
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

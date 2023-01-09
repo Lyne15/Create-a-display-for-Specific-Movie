@@ -1,0 +1,154 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    /* background-color: black; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+
+
+/* #bottom-background {
+    opacity: 30%;
+    background-image: url("https://image.tmdb.org/t/p/original//7fEOKdQIfbkOxy0enLtpyPGUsTm.jpg");
+} */
+
+#logo {
+    background-color: white;
+    height: 15px;
+}
+
+
+
+.content {
+    border: 5px solid black;
+    /* max-width: 500px; */
+    /* background-color:rgb(169, 166, 159); */
+    background-image: url("https://image.tmdb.org/t/p/original//oPp6Gbrasox66WyMvPS0k8OakQf.jpg");
+    height: 200%;
+    width: 80%;
+
+
+}
+
+#movie-title {
+    color: rgb(178, 4, 35);
+    /* background-color: black; */
+    /* border:8px solid red; */
+    padding: 5px 5px;
+    text-align: center;
+    font-family: serif;
+    /* background-color: rgb(246, 246, 246) ; */
+
+
+}
+
+#overview {
+    color: white;
+    font-size: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: rgb(140, 9, 9);
+    opacity: 50%;
+
+
+
+}
+
+
+
+.overview,
+span {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#genres1 {
+    color: aliceblue;
+}
+
+#genres2 {
+    color: aliceblue;
+}
+
+#countries {
+    color: aliceblue;
+}
+
+#tagline {
+    color: rgb(178, 4, 35);
+    text-align: center;
+    font-family: fantasy;
+    font-size: 5em;
+
+}
+
+#vote_average {
+    color: aliceblue;
+}
+
+
+#vote_count {
+    color: aliceblue;
+}
+
+#production_companies {
+    margin: 0;
+    color: black;
+    background-color: white;
+    display: flex;
+    max-width: 80px;
+    padding: 5px 5px;
+}
+
+#release_date {
+    color: black;
+    text-align: center;
+    font-family: cursive;
+
+}
+
+#spoken_languages {
+    color: aliceblue;
+}
+
+
+
+
+
+hr {
+    width: 80%;
+    height: 2px;
+    background-color: rgb(142, 142, 142);
+    /* margin-bottom: 7px;   */
+    /* margin-right: auto;   */
+    /* margin-left: auto;   */
+    /* margin-top: 9px;   */
+    border-width: 3px;
+    border-color: black;
+}
+
+#first-line {
+    width: 50%;
+}
+
+
+#bottom-nav {
+    display: flex;
+    /* margin-top: 12.5em; */
+}
+
+.bottom-nav {
+    padding: 10px 6px;
+    background-color: black;
+    opacity: 60%;
+    color: white;
+
+}
